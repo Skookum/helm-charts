@@ -1,0 +1,9 @@
+dependencies:
+- name: chartmuseum
+  repository: https://kubernetes-charts-incubator.storage.googleapis.com
+  version: 0.4.6
+- name: monocular
+  repository: https://kubernetes-helm.github.io/monocular
+  version: 0.5.0
+digest: sha256:665e38686aa4c7b311ffdd6446e33b8f447e60b78032b8a856be8ed4d83edb20
+generated: 2018-04-04T17:41:14.096131185-04:00

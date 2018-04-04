@@ -1,0 +1,8 @@
+# Chartmuseum URL
+repository: https://charts.cloud.skookum.com
+
+# Charts to Publish
+#   Ordering matters here; charts with dependencies on other charts published
+#   from this repository must be listed after the chart(s) they depend upon.
+charts:
+  - chart-repository

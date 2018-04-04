@@ -1,0 +1,6 @@
+{{- if .Values.route.enabled }}
+To add this as a local chart repository, please run the following commands:
+
+export CHART_MUSEUM_URL="https://$(oc get -o jsonpath="{.spec.host}" route {{ template "chart-repository.fullname" . }} --namespace {{ .Release.Namespace }})"
+helm repo add {{ .Release.Name }} $CHART_MUSEUM_URL
+{{- end }}

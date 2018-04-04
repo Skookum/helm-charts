@@ -1,0 +1,37 @@
+# Default values for chart-repository.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+chartmuseum:
+  persistence:
+    enabled: true
+  env:
+    open:
+      DISABLE_API: false
+      # allow chart versions to be re-uploaded
+      ALLOW_OVERWRITE: false
+  resources:
+    limits:
+      cpu: 500m
+      memory: 1024Mi
+    requests:
+      cpu: 80m
+      memory: 64Mi
+  ingress:
+    enabled: false
+
+monocular:
+  ingress:
+    enabled: false
+
+ingress:
+  enabled: true
+  host: charts.cloud.skookum.com
+  path: /
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
